@@ -4,7 +4,8 @@ import { useStyles } from './styles';
 export interface ButtonProps {
   backgroundColor?: string;
   children: React.ReactNode;
-  primary?: boolean;
+  disabled?: boolean;
+  label?: string;
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
 }
@@ -22,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={classes.button} {...props}>
-      {children}
+      {props.label || children}
     </button>
   );
 };

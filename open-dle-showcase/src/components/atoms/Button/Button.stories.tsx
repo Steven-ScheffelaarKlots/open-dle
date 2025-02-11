@@ -17,49 +17,48 @@ export default buttonMeta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Active: Story = {
   args: {
-    children: "Primary",
+    children: "BUTTON",
   },
 };
 
-export const Secondary: Story = {
+export const Hover: Story = {
   args: {
-    children: "Secondary",
-    backgroundColor: "red",
+    children: "BUTTON",
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
   },
 };
 
-export const Negative: Story = {
+export const Focused: Story = {
   args: {
-    children: "Cancel",
-    backgroundColor: "red",
+    children: "BUTTON",
+  },
+  parameters: {
+    pseudo: {
+      focus: true,
+    },
   },
 };
 
-export const Child: Story = {
+export const Pressed: Story = {
   args: {
-    children: <div>Apples</div>,
+    children: "BUTTON",
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
   },
 };
 
-export const Small: Story = {
+export const Disabled: Story = {
   args: {
-    children: "Primary",
-    size: "small",
+    children: "BUTTON",
+    disabled: true,
   },
-};
-
-export const Medium: Story = {
-  args: {
-    children: "Primary" ,
-    size: "medium",
-  }
-};
-
-export const Large: Story = {
-  args: {
-    children: "Primary",
-    size: "large",
-  }
 };

@@ -17,10 +17,12 @@ type Story = StoryObj<typeof Modal>;
 // Story variants
 export const Primary: Story = {
   args: {
+    isOpen: true,
   },
 };
 
 export const Secondary: Story = {
   args: {
+    isOpen: true,
   },
 };
